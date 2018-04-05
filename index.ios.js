@@ -22,13 +22,15 @@ import {AppRegistry} from "react-native";
 // import study01 from "./demo/scrollview2"
 // import study01 from "./demo/listview-01"
 // import study01 from "./demo/listview-02"
-import study01 from "./demo/flat/FlatListBasic"
+// import study01 from "./demo/flat/FlatListBasic"
 // import study01 from "./demo/NavigatorIOSApp"
 // import study01 from "./demo/TouchableHighlight"
 // import study01 from "./demo/accessibilityinfo"
 
 //import study01 from "./demo/activityindicator"
 // import study01 from "./demo/activityindicator-02"
+
+import study01 from "./demo/SelectableSectionsListView"
 AppRegistry.registerComponent('study01', () => study01);
 
 /**

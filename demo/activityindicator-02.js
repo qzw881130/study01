@@ -1,9 +1,12 @@
 import React from "react"
 import {
     ActivityIndicator, View, Text, StyleSheet, Button, DrawerLayoutAndroid,
-    Platform
+    Platform,
+    TouchableOpacity
 } from "react-native";
 import CheckBox from 'react-native-checkbox';
+import Communications from 'react-native-communications';
+
 
 export default class Activityindicator extends React.Component{
     constructor(props){
@@ -76,6 +79,38 @@ export default class Activityindicator extends React.Component{
                 </View>
                 <View style={Styles.item}>
                     {Darwer}
+                </View>
+                <View style={[Styles.item, {flex: 3}]}>
+                    <TouchableOpacity style={{height:20,marginTop:20}}
+                                      onPress={()=>{
+                                          Communications.phonecall('10086', false);
+
+                                      }}>
+                        <Text>调用系统打电话功能</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={{height:20,marginTop:20}}
+                                     onPress={()=>{
+
+                                         Communications.text('10086','要发送的内容');
+                                         Communications.textWithoutEncoding('10086','要发送的内容encoding');//这种方法需要将内容encoding
+
+
+
+                                     }}>
+                        <Text>调用系统发短信功能</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={{height:20,marginTop:20}}
+                                     onPress={()=>{
+                                         Communications.email(['emailAddress1@qq.com'],null,null,'My Subject','My body text')
+                                     }}>
+                        <Text>调用系统发邮件功能</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={{height:20,marginTop:20}}
+                                 onPress={()=>{
+                                     Communications.web('https://github.com/facebook/react-native')
+                                 }}>
+                        <Text>调用系统打开网页功能</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         );
