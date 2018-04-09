@@ -9,9 +9,9 @@ const {
     View,
 } = ReactNative;
 
-exports.framework = 'React';
-exports.title = '<StatusBar>';
-exports.description = 'Component for controlling the status bar';
+const framework = 'React';
+const title = '<StatusBar>';
+const description = 'Component for controlling the status bar';
 
 const colors = [
     '#ff0000',
@@ -432,7 +432,7 @@ const examples = [{
     }
 }];
 
-export default exports;
+export {examples, framework, title, description};
 // exports.examples = examples;
 
 var styles = StyleSheet.create({
