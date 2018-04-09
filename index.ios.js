@@ -28,9 +28,10 @@ import {AppRegistry} from "react-native";
 // import study01 from "./demo/accessibilityinfo"
 
 //import study01 from "./demo/activityindicator"
-// import study01 from "./demo/activityindicator-02"
+//   import study01 from "./demo/activityindicator-02"
 
-import study01 from "./demo/SelectableSectionsListView"
+// import study01 from "./demo/SelectableSectionsListView"
+import study01 from "./demo/statusbar"
 AppRegistry.registerComponent('study01', () => study01);
 
 /**
